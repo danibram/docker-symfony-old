@@ -34,6 +34,8 @@ RUN curl -sS https://getcomposer.org/installer | php \
 
 RUN gem install compass
 
+RUN usermod -u 1000 www-data
+
 ONBUILD ADD . /var/www/html
 ONBUILD RUN chown -R www-data:www-data .
 
