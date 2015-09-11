@@ -20,4 +20,4 @@ RUN curl -sS https://getcomposer.org/installer | php \
 
 RUN gem install compass
 
-WORKDIR /var/www/symfony
+WORKDIR /var/www/html
