@@ -22,6 +22,6 @@ RUN mv composer.phar /usr/local/bin/composer
 
 WORKDIR /var/www/html
 
-RUN ["chmod", "+x", "/launch.sh"]
+RUN ["chmod", "+x", "launch.sh"]
 
 ADD launch.sh /launch
