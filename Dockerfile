@@ -22,6 +22,6 @@ RUN mv composer.phar /usr/local/bin/composer
 
 WORKDIR /var/www/html
 
-RUN ["chmod", "+x", "launch.sh"]
-
-ADD launch.sh /launch
+RUN ["chown", "-R", "www-data:www-data", "."]
+RUN ["composer", "install"]
+RUN ["/usr/sbin/apache2", "-D", "FOREGROUND"]
